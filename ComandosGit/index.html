@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comandos Git</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>Comandos Git</h1>
+        <p>Guia rápido dos principais comandos Git</p>
+    </header>
+
+    <nav id="menu">
+        <a href="#branches">Branches</a>
+        <a href="#checkout">Checkout / Switch</a>
+        <a href="#merge">Merge</a>
+        <a href="#remoto">Repositórios Remotos</a>
+        <a href="#logs">Histórico</a>
+        <a href="#tags">Tags</a>
+        <a href="#undo">Undo / Reset / Revert</a>
+        <a href="#auxiliares">Auxiliares</a>
+    </nav>
+
+    <main>
+
+        <!-- 1. Branches -->
+        <section id="branches" class="secao">
+            <h2>1. Criação e Gestão de Branches</h2>
+
+            <article class="comando">
+                <h3><code>git branch</code></h3>
+                <p>Lista todas as branches locais existentes no repositório.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git branch &lt;nome-da-branch&gt;</code></h3>
+                <p>Cria uma nova branch a partir do estado atual, sem alternar para ela.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git branch -a</code></h3>
+                <p>Lista todas as branches, tanto locais quanto remotas.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git branch -d &lt;nome-da-branch&gt;</code></h3>
+                <p>Exclui uma branch local que já foi integrada (merged).</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git branch -D &lt;nome-da-branch&gt;</code></h3>
+                <p>Força a exclusão de uma branch local, mesmo que contenha alterações não integradas.</p>
+            </article>
+        </section>
+
+
+        <!-- 2. Checkout / Switch -->
+        <section id="checkout" class="secao">
+            <h2>2. Navegação e Alternância (Checkout / Switch)</h2>
+
+            <article class="comando">
+                <h3><code>git checkout &lt;nome-da-branch&gt;</code></h3>
+                <p>Alterna a área de trabalho para a branch especificada.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git checkout -b &lt;nome-da-branch&gt;</code></h3>
+                <p>Cria uma nova branch e alterna para ela imediatamente.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git switch &lt;nome-da-branch&gt;</code></h3>
+                <p>Alterna para a branch especificada usando o comando mais moderno.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git switch -c &lt;nome-da-branch&gt;</code></h3>
+                <p>Cria uma nova branch e alterna para ela imediatamente.</p>
+            </article>
+        </section>
+
+
+        <!-- 3. Merge -->
+        <section id="merge" class="secao">
+            <h2>3. Integração de Alterações (Merge)</h2>
+
+            <article class="comando">
+                <h3><code>git merge &lt;nome-da-branch&gt;</code></h3>
+                <p>Integra o histórico e as alterações da branch informada à branch atual.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git merge --abort</code></h3>
+                <p>Cancela uma operação de merge em andamento e restaura o estado anterior.</p>
+            </article>
+        </section>
+
+
+        <!-- 4. Repositórios remotos -->
+        <section id="remoto" class="secao">
+            <h2>4. Sincronização com Repositórios Remotos</h2>
+
+            <article class="comando">
+                <h3><code>git push origin &lt;nome-da-branch&gt;</code></h3>
+                <p>Envia os commits locais da branch para o repositório remoto.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git fetch</code></h3>
+                <p>Baixa informações e novos commits do repositório remoto sem alterar os arquivos locais.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git pull</code></h3>
+                <p>Busca alterações remotas e as integra imediatamente à branch atual.</p>
+            </article>
+        </section>
+
+
+        <!-- 5. Logs -->
+        <section id="logs" class="secao">
+            <h2>5. Visualização de Histórico e Logs</h2>
+
+            <article class="comando">
+                <h3><code>git log</code></h3>
+                <p>Exibe o histórico detalhado de commits, incluindo autor, data, hash e mensagem.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git log --oneline</code></h3>
+                <p>Exibe o histórico de commits de forma resumida.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git log --graph --all</code></h3>
+                <p>Exibe uma representação gráfica em texto do fluxo das branches do projeto.</p>
+            </article>
+        </section>
+
+
+        <!-- 6. Tags -->
+        <section id="tags" class="secao">
+            <h2>6. Marcadores e Versões (Tags)</h2>
+
+            <article class="comando">
+                <h3><code>git tag</code></h3>
+                <p>Lista todas as tags existentes no repositório.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git tag &lt;nome-da-tag&gt;</code></h3>
+                <p>Cria uma lightweight tag apontando para o commit atual.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git tag -a &lt;nome-da-tag&gt; -m "&lt;mensagem&gt;"</code></h3>
+                <p>Cria uma annotated tag contendo informações como autor, data e mensagem.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git push origin &lt;nome-da-tag&gt;</code></h3>
+                <p>Envia uma tag específica para o repositório remoto.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git push origin --tags</code></h3>
+                <p>Envia todas as tags criadas localmente para o repositório remoto.</p>
+            </article>
+        </section>
+
+
+        <!-- 7. Undo / Reset / Revert -->
+        <section id="undo" class="secao">
+            <h2>7. Correção e Restauração de Erros</h2>
+
+            <article class="comando">
+                <h3><code>git checkout -- &lt;arquivo&gt;</code></h3>
+                <p>Desfaz alterações não salvas no arquivo, restaurando a versão do último commit.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git restore &lt;arquivo&gt;</code></h3>
+                <p>Restaura o arquivo do working directory para o estado do último commit.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git restore --staged &lt;arquivo&gt;</code></h3>
+                <p>Remove o arquivo da staging area, desfazendo o git add e mantendo as alterações.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git reset --soft &lt;hash-do-commit&gt;</code></h3>
+                <p>Volta o histórico até o commit especificado, preservando as alterações na staging area.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git reset --mixed &lt;hash-do-commit&gt;</code></h3>
+                <p>Volta o histórico, desfaz a staging area e mantém as alterações nos arquivos.</p>
+            </article>
+
+            <article class="comando comando-perigoso">
+                <h3><code>git reset --hard &lt;hash-do-commit&gt;</code></h3>
+                <p>
+                    Desfaz completamente as alterações locais e altera o histórico.
+                    <strong>Operação destrutiva.</strong>
+                </p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git revert &lt;hash-do-commit&gt;</code></h3>
+                <p>
+                    Cria um novo commit que desfaz as alterações do commit informado,
+                    preservando o histórico original.
+                </p>
+            </article>
+        </section>
+
+
+        <!-- 8. Auxiliares -->
+        <section id="auxiliares" class="secao">
+            <h2>8. Comandos Auxiliares</h2>
+
+            <article class="comando">
+                <h3><code>git add .</code></h3>
+                <p>Adiciona arquivos modificados à staging area.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git add &lt;arquivo&gt;</code></h3>
+                <p>Adiciona um arquivo específico à staging area.</p>
+            </article>
+
+            <article class="comando">
+                <h3><code>git commit -m "&lt;mensagem&gt;"</code></h3>
+                <p>Registra as alterações da staging area no histórico local.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <p>Guia de Comandos Git - Material de estudo</p>
+    </footer>
+
+</body>
+
+</html>

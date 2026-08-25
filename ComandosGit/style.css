@@ -1,0 +1,169 @@
+/* =========================
+   ESTILOS GERAIS
+   ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+/* Seleção por ID */
+#cabecalho {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Seleção por TAG */
+h1 {
+    margin: 0;
+}
+
+
+/* =========================
+   MENU
+   ========================= */
+
+#menu {
+    background-color: #24292e;
+    text-align: center;
+    padding: 15px;
+}
+
+/* TAG dentro de ID */
+#menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Pseudo-classe */
+#menu a:hover {
+    color: #58a6ff;
+}
+
+
+/* =========================
+   CONTEÚDO
+   ========================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* Seleção por classe */
+.secao {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+
+/* Títulos das seções */
+h2 {
+    color: #24292e;
+    border-bottom: 2px solid #58a6ff;
+    padding-bottom: 10px;
+}
+
+
+/* =========================
+   COMANDOS
+   ========================= */
+
+.comando {
+    border-left: 4px solid #58a6ff;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+
+/* TAG dentro de uma classe */
+.comando h3 {
+    margin-top: 0;
+}
+
+
+/* Estilo dos comandos Git */
+code {
+    background-color: #e8e8e8;
+    color: #d73a49;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+}
+
+
+/* =========================
+   COMANDO PERIGOSO
+   ========================= */
+
+.comando-perigoso {
+    border-left-color: #d73a49;
+    background-color: #fff0f0;
+}
+
+.comando-perigoso code {
+    color: #b00020;
+}
+
+.comando-perigoso strong {
+    color: #b00020;
+}
+
+
+/* =========================
+   PARÁGRAFOS
+   ========================= */
+
+p {
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+#rodape {
+    background-color: #24292e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    #menu a {
+        display: block;
+        margin: 10px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .secao {
+        padding: 15px;
+    }
+
+}
