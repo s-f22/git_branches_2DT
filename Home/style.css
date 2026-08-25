@@ -1,0 +1,83 @@
+/* Referência a uma TAG */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Referência a um ID */
+#cabecalho {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Referência a uma TAG dentro de outra TAG */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Referência a uma CLASSE */
+.secao {
+    background-color: white;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 960px;
+    border-radius: 8px;
+}
+
+/* Referência a um ID */
+#inicio {
+    border-left: 5px solid #f12c23;
+}
+
+/* Referência a TAG */
+h2 {
+    color: #f12c23;
+}
+
+/* Referência a TAG */
+p {
+    line-height: 1.6;
+}
+
+/* Referência a uma classe + TAG */
+.secao img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Referência a TAG */
+input,
+textarea {
+    padding: 8px;
+    width: 300px;
+    max-width: 90%;
+}
+
+/* Referência a TAG */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Referência a TAG com pseudo-classe */
+button:hover {
+    background-color: #217dbb;
+}
+
+/* Referência a uma TAG */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}

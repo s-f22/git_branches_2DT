@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Página HTML</title>
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>Minha Página HTML</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="secao">
+            <h2>Bem-vindo!</h2>
+
+            <p>
+                Esta é uma página simples criada utilizando algumas
+                das principais e mais comuns tags do HTML.
+            </p>
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_hTBVaxPacbGCSpSGp-CMgi8OzX09eHSZrMtBziHdM8jllZdi2ClsQw&s=10"
+                alt="Imagem do SENAI"
+            >
+        </section>
+
+        <section id="sobre" class="secao">
+            <h2>Sobre a página</h2>
+
+            <p>
+                O HTML é utilizado para estruturar o conteúdo de uma
+                página web, enquanto o CSS é utilizado para definir
+                sua aparência.
+            </p>
+
+            <h3>Algumas tecnologias:</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript (Logo mais 😎)</li>
+            </ul>
+
+            <h3>Passos para criar uma página:</h3>
+
+            <ol>
+                <li>Criar o arquivo HTML</li>
+                <li>Criar o arquivo CSS</li>
+                <li>Linkar o CSS ao HTML</li>
+            </ol>
+        </section>
+
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <br><br>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+
+                <br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; SENAI São Caetano do Sul - Cyber e IA</p>
+    </footer>
+
+</body>
+</html>
